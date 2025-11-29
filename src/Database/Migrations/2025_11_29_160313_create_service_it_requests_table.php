@@ -16,7 +16,6 @@ return new class extends Migration
             $table->unsignedInteger('customer_id_service')->index();
             $table->unsignedInteger('id_service_it')->index();
 
-
             $table->unsignedInteger('order_id')->index()->nullable();
             $table->json('requirements')->nullable();
             $table->string('status')->default('pending');
