@@ -35,7 +35,7 @@ class ServiceITServiceProvider extends ServiceProvider
         });
     }
 
-    /**
+    /**2
      * Register package config.
      *
      * @return void
