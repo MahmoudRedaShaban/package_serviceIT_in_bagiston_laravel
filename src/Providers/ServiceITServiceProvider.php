@@ -33,6 +33,11 @@ class ServiceITServiceProvider extends ServiceProvider
         Event::listen('bagisto.admin.layout.head', function($viewRenderEventManager) {
             $viewRenderEventManager->addTemplate('serviceit::admin.layouts.style');
         });
+
+
+        $this->publishes([
+            __DIR__.'/../Resources/lang' => resource_path('lang/vendor/serviceit'),
+        ],'serviceit-translations');
     }
 
     /**2
