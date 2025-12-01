@@ -2,12 +2,12 @@
 
     <!-- Title of the page -->
     <x-slot:title>
-        Package ServiceIT
+        @lang('serviceit::app.admin.title')
     </x-slot>
 
     <!-- Page Content -->
     <div class="page-content">
-        <h1>Package ServiceIT</h1>
+        <h1>__('serviceit::app.admin.content')</h1>
     </div>
 
 </x-admin::layouts>
