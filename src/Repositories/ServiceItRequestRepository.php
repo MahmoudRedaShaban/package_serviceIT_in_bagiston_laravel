@@ -11,7 +11,8 @@ class ServiceItRequestRepository extends Repository
      */
     public function model(): string
     {
-        return 'Webkul\ServiceIT\Contracts\ServiceItRequest';
+        return 'Webkul\ServiceIT\Models\ServiceItRequest';
     }
+
 
 }

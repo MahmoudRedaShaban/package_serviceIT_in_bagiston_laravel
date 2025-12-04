@@ -3,6 +3,9 @@
 namespace Webkul\ServiceIT\Repositories;
 
 use Webkul\Core\Eloquent\Repository;
+use Webkul\ServiceIT\Contracts\ServiceIT;
+use Webkul\ServiceIT\Models\ServiceIT as ModelsServiceIT;
+use Webkul\ServiceIT\Models\ServiceITProxy;
 
 class ServiceITRepository extends Repository
 {
@@ -11,6 +14,17 @@ class ServiceITRepository extends Repository
      */
     public function model(): string
     {
-        return 'Webkul\ServiceIT\Contracts\ServiceIT';
+        return ModelsServiceIT::class;
     }
+
+    public function getStatus()
+    {
+        return [
+            'total' => $this->count(),
+            'unactive' => $this->findWhere(['status' => 0])->count(),
+            'active' => $this->findWhere(['status' => 1])->count(),
+        ];
+    }
+
+
 }

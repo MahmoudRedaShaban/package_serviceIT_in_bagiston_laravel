@@ -9,13 +9,13 @@ enum ServiceStatus:string
     case Rejected = 'rejected';
 
 
-    public function label($this): string
-    {
-        return match($this){
-            self::Pending => "Pending Approval",
-            self::Approved => "Approved Successfully",
-            self::Rejected => "Request Rejected"
-        };
-    }
+    // public function label($this): string
+    // {
+    //     return match($this){
+    //         self::Pending => "Pending Approval",
+    //         self::Approved => "Approved Successfully",
+    //         self::Rejected => "Request Rejected"
+    //     };
+    // }
 
 }

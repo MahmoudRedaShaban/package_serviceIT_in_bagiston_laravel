@@ -4,9 +4,8 @@ namespace Webkul\ServiceIT\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use ServiceStatusCast;
+use Webkul\ServiceIT\Casts\ServiceStatusCast;
 use Webkul\ServiceIT\Contracts\ServiceItRequest as ServiceItRequestContract;
-use Webkul\ServiceIT\Enums\ServiceStatus;
 
 class ServiceItRequest extends Model implements ServiceItRequestContract
 {
@@ -43,7 +42,7 @@ class ServiceItRequest extends Model implements ServiceItRequestContract
 
     public function service_it()
     {
-        return $this->belongsTo(ServiceIT::class);
+        return $this->belongsTo(ServiceIT::class,'id_service_it','id');
     }
 
 }

@@ -1,5 +1,7 @@
 <?php
 
+namespace Webkul\ServiceIT\Casts;
+
 use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
 use Webkul\ServiceIT\Enums\ServiceStatus;
 
